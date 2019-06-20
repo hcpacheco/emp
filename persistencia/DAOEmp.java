@@ -22,7 +22,7 @@ public class DAOEmp {
 	{
 		return civis;
 	}
-	
+
 	public void setCivis(List<Civil> civis) 
 	{
 		this.civis = civis;
@@ -46,6 +46,14 @@ public class DAOEmp {
 	public void setObjetos(List<ObjetoPerigoso> objetos) 
 	{
 		this.objetos = objetos;
+	}
+	
+	public DAOEmp(List<Policial> usuarios, List<Civil> civis, List<Detento> detentos, List<ObjetoPerigoso> objetos) {
+		super();
+		this.setUsuarios(usuarios);
+		this.setCivis(civis);
+		this.setDetentos(detentos);
+		this.setObjetos(objetos);
 	}
 	
 	

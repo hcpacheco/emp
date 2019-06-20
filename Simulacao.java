@@ -5,8 +5,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
-
 import emp.persistencia.Civil;
 import emp.persistencia.DAOEmp;
 import emp.persistencia.Detento;
@@ -62,6 +60,7 @@ public class Simulacao {
 		Civil civil5 = new Civil( posicoes, true);
 		Civil civil6 = new Civil("Aline", data2, Sexo.FEMININO, "0012", posicoes, false);
 		
+		
 		//POLICIAIS
 		//(String nome, Date d, Sexo s, String cpf, String usuario, String senha, int permissao)
 		Policial policial1 = new Policial("Alberto",data1,Sexo.MASCULINO,"8260","alberto","senha",0);
@@ -70,7 +69,7 @@ public class Simulacao {
 		//DETENTOS
 		//(String nome, Date d, Sexo s, String cpf,List<Float> posicoes, int atividadeCardiaca)
 		Detento detento1 = new Detento("Juliana", data2, Sexo.FEMININO, "0101", posicoes, -1);
-		Detento detneto2 = new Detento("Zé", data1, Sexo.MASCULINO, "1010", posicoes, -1);
+		Detento detento2 = new Detento("Zé", data1, Sexo.MASCULINO, "1010", posicoes, -1);
 		
 		//OBJETOS PERIGOSOS
 		//(String nome, int tamanho)
@@ -79,9 +78,32 @@ public class Simulacao {
 		ObjetoPerigoso objeto3 = new ObjetoPerigoso("Machado", 50);
 		
 		
+		//Inicialização de listas de dados usados no objeto DAOEmp
+		List<Civil> listac = new ArrayList<Civil>();
+		listac.add(civil1);
+		listac.add(civil2);
+		listac.add(civil3);
+		listac.add(civil4);
+		listac.add(civil5);
+		listac.add(civil6);
+		
+		List<Policial> listap = new ArrayList<Policial>();
+		listap.add(policial1);
+		listap.add(policial2);
+		
+		List<Detento> listad = new ArrayList<Detento>();
+		listad.add(detento1);
+		listad.add(detento2);
+		
+		List<ObjetoPerigoso> listao = new ArrayList<ObjetoPerigoso>();
+		listao.add(objeto1);
+		listao.add(objeto2);
+		listao.add(objeto3);
+
 		
 		//Inicialização de banco de dados para simulação
-		DAOEmp d = new DAOEmp();
+		//(List<Policial> usuarios, List<Civil> civis, List<Detento> detentos, List<ObjetoPerigoso> objetos) 
+		DAOEmp d = new DAOEmp(listap, listac, listad, listao);
 		
 		
 		
