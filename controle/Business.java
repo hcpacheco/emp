@@ -6,9 +6,21 @@ import emp.ZonaDePatrulha;
 
 public class Business {
 	
-	private Notificacao n; // = new Notificacao();
-	private List<ZonaDePatrulha> z; // = new ZonaDePatrulha();
+	private Notificacao notificacao; // = new Notificacao();
+	private List<ZonaDePatrulha> zonas; // = new ZonaDePatrulha();
 //	private DAO =
+	
+	public Business(Notificacao n, List<ZonaDePatrulha> z) {
+		super();
+		this.notificacao = new Notificacao();
+		this.setZonas(z);;
+	}
+
+
+	public void setZonas(List<ZonaDePatrulha> zonas) {
+		this.zonas = zonas;
+	}
+
 
 	public void newZonaDePatulha(List<Float> latitudes, List<Float> longitudes) 
 	{
@@ -19,7 +31,7 @@ public class Business {
 		if(tamanhoLatitude == 4 && tamanhoLongitude==4)
 		{
 			ZonaDePatrulha novaZona = new ZonaDePatrulha(latitudes,longitudes);
-			this.z.add(novaZona);
+			this.zonas.add(novaZona);
 		}
 	}
 	

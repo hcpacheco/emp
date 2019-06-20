@@ -10,7 +10,7 @@ public class ControleEmpSingleton {
 	//Construtor privado Singleton
 	private ControleEmpSingleton() 
 	{
-		this.b = new Business();
+		this.b = new Business(null, null);
 		//this.d = new DAOEmp();
 	}
 	
