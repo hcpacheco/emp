@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ZonaDePatrulha {
+	private String nome;
 	private List<Float> latitudes;//= new ArrayList();
 	private List<Float> longitudes;// = new ArrayList();
-	private String nome;
 	
 	public List getLatitudes() {
 		return latitudes;
@@ -24,7 +24,7 @@ public class ZonaDePatrulha {
 		this.nome = nome;
 	}
 
-	public ZonaDePatrulha(List latitudes, List longitudes, String nome) {
+	public ZonaDePatrulha(String nome,List latitudes, List longitudes) {
 		super();
 		this.latitudes = latitudes;
 		this.longitudes = longitudes;

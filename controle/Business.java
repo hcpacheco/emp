@@ -8,7 +8,6 @@ public class Business {
 
 	private Notificacao notificacao; // = new Notificacao();
 	private List<ZonaDePatrulha> zonas; // = new ZonaDePatrulha();
-//	private DAO =
 
 	public Business(Notificacao n, List<ZonaDePatrulha> z) {
 		super();

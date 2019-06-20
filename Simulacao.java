@@ -11,6 +11,7 @@ import emp.persistencia.Detento;
 import emp.persistencia.ObjetoPerigoso;
 import emp.persistencia.Policial;
 import emp.persistencia.Sexo;
+import emp.persistencia.ZonaDePatrulha;
 
 public class Simulacao {
 
@@ -76,7 +77,36 @@ public class Simulacao {
 		ObjetoPerigoso objeto3 = new ObjetoPerigoso("Machado", 50);
 
 		//ZONAS DE PATRULHA
+		List<Float> latitudes1 = new ArrayList<Float>();
+		latitudes1.add(new Float(10.2));
+		latitudes1.add(new Float(1.1));
+		latitudes1.add(new Float(3.3));
+		latitudes1.add(new Float(4.25));
 		
+		List<Float> latitudes2 = new ArrayList<Float>();
+		latitudes2.add(new Float(1.4));
+		latitudes2.add(new Float(9.4));
+		latitudes2.add(new Float(3.1));
+		latitudes2.add(new Float(6.7));
+		
+		List<Float> longitudes1 = new ArrayList<Float>();
+		longitudes1.add(new Float(10.2));
+		longitudes1.add(new Float(1.1));
+		longitudes1.add(new Float(3.3));
+		longitudes1.add(new Float(4.25));
+		
+		List<Float> longitudes2 = new ArrayList<Float>();
+		longitudes2.add(new Float(0.3));
+		longitudes2.add(new Float(2.5));
+		longitudes2.add(new Float(8.8));
+		longitudes2.add(new Float(5.3));
+		
+		ZonaDePatrulha zona1 = new ZonaDePatrulha("Centro", latitudes1, longitudes1);
+		ZonaDePatrulha zona2 = new ZonaDePatrulha("Agronomia", latitudes2,longitudes2);
+		
+		List<ZonaDePatrulha> listaz = new ArrayList<ZonaDePatrulha>();
+		listaz.add(zona1);
+		listaz.add(zona2);
 		
 		// Inicialização de listas de dados usados no objeto DAOEmp
 		List<Civil> listac = new ArrayList<Civil>();
