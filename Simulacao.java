@@ -9,6 +9,8 @@ import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
 
 import emp.persistencia.Civil;
 import emp.persistencia.DAOEmp;
+import emp.persistencia.Detento;
+import emp.persistencia.Policial;
 import emp.persistencia.Sexo;
 
 public class Simulacao {
@@ -24,38 +26,50 @@ public class Simulacao {
 		posicoes.add(new Float(3.3));
 		
 		//Data de nascimento
-		Date d1 = new Date();
-		Date d2 = new Date();
+		Date data1 = new Date();
+		Date data2 = new Date();
         // Converte string para date
         SimpleDateFormat dateformat = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
         String strdate = "02-04-2000 21:35:00";
+
         try {
-            d1 = dateformat.parse(strdate);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+			data1 = dateformat.parse(strdate);
+		} catch (java.text.ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
             
         SimpleDateFormat dateformat2 = new SimpleDateFormat("dd-M-yyyy hh:mm:ss");
         String strdate2 = "10-08-1988 11:10:00";
         try {
-            d2 = dateformat2.parse(strdate2);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+			data2 = dateformat2.parse(strdate2);
+		} catch (java.text.ParseException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 		
 		
 		//CIVIS
-		//(String nome, Date d, Sexo s, String cpf, List<Float> posicoes, boolean suspeito, boolean conhecido)
-		Civil c1 = new Civil("Maria", d1, Sexo.FEMININO, "1234", posicoes, false);
-		Civil c2 = new Civil("Joao", d2, null, null, null, false);
-		Civil c3 = new Civil( null, false);
-		Civil c4 = new Civil( null, true);
-		Civil c5 = new Civil( null, true);
-		Civil c6 = new Civil("Aline", d2, null, null, null, false);
+		//(String nome, Date d, Sexo s, String cpf, List<Float> posicoes, boolean suspeito)
+        //(List<Float> posicoes, boolean suspeito)
+		Civil civil1 = new Civil("Maria", data1, Sexo.FEMININO, "1234", posicoes, false);
+		Civil civil2 = new Civil("Joao", data2, Sexo.MASCULINO, "2345", posicoes, false);
+		Civil civil3 = new Civil( posicoes, false);
+		Civil civil4 = new Civil( posicoes, true);
+		Civil civil5 = new Civil( posicoes, true);
+		Civil civil6 = new Civil("Aline", data2, Sexo.FEMININO, "0012", posicoes, false);
 		
 		//POLICIAIS
+		//(String nome, Date d, Sexo s, String cpf, String usuario, String senha, int permissao)
+		Policial policial1 = new Policial("Alberto",data1,Sexo.MASCULINO,"8260","alberto","senha",0);
+		Policial policial2 = new Policial("Elena",data2,Sexo.FEMININO,"9922","elena","policial",1);
 		
 		//DETENTOS
+		//(String nome, Date d, Sexo s, String cpf,List<Float> posicoes, int atividadeCardiaca)
+		Detento detento1 = new Detento("Juliana", data2, Sexo.FEMININO, "0101", posicoes, -1);
+		Detento detneto2 = new Detento("Zé", data1, Sexo.MASCULINO, "1010", posicoes, -1);
 		
 		//OBJETOS PERIGOSOS
 		
