@@ -6,7 +6,7 @@ public class DAOEmp {
 	private List<Policial> usuarios;
 	private List<Civil> civis;
 	private List<Detento> detentos;
-	private List<ObjetosPerigosos> objetos;
+	private List<ObjetoPerigoso> objetos;
 	
 	public List<Policial> getUsuarios() 
 	{
@@ -38,12 +38,12 @@ public class DAOEmp {
 		this.detentos = detentos;
 	}
 	
-	public List<ObjetosPerigosos> getObjetos() 
+	public List<ObjetoPerigoso> getObjetos() 
 	{
 		return objetos;
 	}
 	
-	public void setObjetos(List<ObjetosPerigosos> objetos) 
+	public void setObjetos(List<ObjetoPerigoso> objetos) 
 	{
 		this.objetos = objetos;
 	}

@@ -10,6 +10,7 @@ import com.sun.org.apache.xerces.internal.impl.xpath.regex.ParseException;
 import emp.persistencia.Civil;
 import emp.persistencia.DAOEmp;
 import emp.persistencia.Detento;
+import emp.persistencia.ObjetoPerigoso;
 import emp.persistencia.Policial;
 import emp.persistencia.Sexo;
 
@@ -72,6 +73,12 @@ public class Simulacao {
 		Detento detneto2 = new Detento("Zé", data1, Sexo.MASCULINO, "1010", posicoes, -1);
 		
 		//OBJETOS PERIGOSOS
+		//(String nome, int tamanho)
+		ObjetoPerigoso objeto1 = new ObjetoPerigoso("Faca", 17);
+		ObjetoPerigoso objeto2 = new ObjetoPerigoso("Pistola", 21);
+		ObjetoPerigoso objeto3 = new ObjetoPerigoso("Machado", 50);
+		
+		
 		
 		//Inicialização de banco de dados para simulação
 		DAOEmp d = new DAOEmp();

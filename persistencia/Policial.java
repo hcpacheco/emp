@@ -28,9 +28,9 @@ public class Policial extends Pessoa
 	
 	public Policial(String nome, Date d, Sexo s, String cpf, String usuario, String senha, int permissao) {
 		super(nome,d,s,cpf);
-		this.usuario = usuario;
-		this.senha = senha;
-		this.permissao = permissao;
+		this.setUsuario(usuario);
+		this.setSenha(senha);
+		this.setPermissao(permissao);
 	}
 	
 

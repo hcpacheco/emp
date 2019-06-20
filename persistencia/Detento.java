@@ -23,8 +23,8 @@ public class Detento extends Pessoa
 	
 	public Detento(String nome, Date d, Sexo s, String cpf,List<Float> posicoes, int atividadeCardiaca) {
 		super();
-		this.posicoes = posicoes;
-		this.atividadeCardiaca = atividadeCardiaca;
+		this.setPosicoes(posicoes);
+		this.setAtividadeCardiaca(atividadeCardiaca);
 	}
 
 }

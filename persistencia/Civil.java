@@ -42,16 +42,16 @@ public class Civil extends Pessoa
 	public Civil(String nome, Date d, Sexo s, String cpf, List<Float> posicoes, boolean suspeito) {
 		
 		super(nome,d,s,cpf);
-		this.posicoes = posicoes;
-		this.suspeito = suspeito;
-		this.conhecido = true;
+		this.setPosicoes(posicoes);
+		this.setSuspeito(suspeito);
+		this.setConhecido(true);
 	}
 
 	public Civil(List<Float> posicoes, boolean suspeito) {
 		super();
-		this.posicoes = posicoes;
-		this.suspeito = suspeito;
-		this.conhecido = false;
+		this.setPosicoes(posicoes);
+		this.setSuspeito(suspeito);
+		this.setConhecido(false);
 	}
 	
 
