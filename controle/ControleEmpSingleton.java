@@ -2,7 +2,7 @@ package emp.controle;
 
 public class ControleEmpSingleton {
 	private Business b;// = new Business();
-	//private DAOEmp d;// = new DAOEmp()
+//	private DAOEmp d;// = new DAOEmp()
 	
 	//Instancia singleton de ControleEmp
 	private static final ControleEmpSingleton instance = new ControleEmpSingleton();

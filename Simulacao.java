@@ -135,7 +135,7 @@ public class Simulacao {
 		// List<ObjetoPerigoso> objetos)
 		DAOEmp d = new DAOEmp(listap, listac, listad, listao, listaz);
 
-		//Death Stranding
+		//Fernanda Montenegro
 	}
 
 }
