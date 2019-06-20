@@ -1,4 +1,4 @@
-package emp;
+package emp.persistencia;
 
 import java.util.ArrayList;
 import java.util.List;

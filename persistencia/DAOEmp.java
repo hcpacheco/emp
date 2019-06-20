@@ -7,12 +7,21 @@ public class DAOEmp {
 	private List<Civil> civis;
 	private List<Detento> detentos;
 	private List<ObjetoPerigoso> objetos;
+	private List<ZonaDePatrulha> zonas;
 	
 	public List<Policial> getUsuarios() 
 	{
 		return usuarios;
 	}
 	
+	public List<ZonaDePatrulha> getZonas() {
+		return zonas;
+	}
+
+	public void setZonas(List<ZonaDePatrulha> zonas) {
+		this.zonas = zonas;
+	}
+
 	public void setUsuarios(List<Policial> usuarios) 
 	{
 		this.usuarios = usuarios;
@@ -48,12 +57,13 @@ public class DAOEmp {
 		this.objetos = objetos;
 	}
 	
-	public DAOEmp(List<Policial> usuarios, List<Civil> civis, List<Detento> detentos, List<ObjetoPerigoso> objetos) {
+	public DAOEmp(List<Policial> usuarios, List<Civil> civis, List<Detento> detentos, List<ObjetoPerigoso> objetos, List<ZonaDePatrulha> zonas) {
 		super();
 		this.setUsuarios(usuarios);
 		this.setCivis(civis);
 		this.setDetentos(detentos);
 		this.setObjetos(objetos);
+		this.setZonas(zonas);
 	}
 	
 	
