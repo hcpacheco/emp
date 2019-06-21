@@ -134,8 +134,6 @@ public class Simulacao {
 		// (List<Policial> usuarios, List<Civil> civis, List<Detento> detentos,
 		// List<ObjetoPerigoso> objetos)
 		DAOEmp d = new DAOEmp(listap, listac, listad, listao, listaz);
-
-		// Keanu
 	}
 
 }
