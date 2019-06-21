@@ -141,6 +141,7 @@ public class Simulacao {
 		controle.setDAO(d);
 		
 		//NONATO
+		//KOJIMAGOD
 	}
 
 }
