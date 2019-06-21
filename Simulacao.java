@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import emp.controle.ControleEmpSingleton;
 import emp.persistencia.Civil;
 import emp.persistencia.DAOEmp;
 import emp.persistencia.Detento;
@@ -134,6 +135,12 @@ public class Simulacao {
 		// (List<Policial> usuarios, List<Civil> civis, List<Detento> detentos,
 		// List<ObjetoPerigoso> objetos)
 		DAOEmp d = new DAOEmp(listap, listac, listad, listao, listaz);
+		
+		//Inicialização de ControleEmpSingleton
+		ControleEmpSingleton controle = ControleEmpSingleton.getInstance();
+		controle.setDAO(d);
+		
+		//NONATO
 	}
 
 }
